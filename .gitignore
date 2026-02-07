@@ -1,0 +1,53 @@
+# Environment and API Keys
+.env
+config_local.py
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and outputs
+*.log
+discovery_log.txt
+error_log.txt
+
+# Cache and test outputs
+cache/
+*.csv
+benchmark_results_*.json
+strategy_test_*.json
+
+# OS
+.DS_Store
+Thumbs.db
