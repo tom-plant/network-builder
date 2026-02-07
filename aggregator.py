@@ -4,11 +4,22 @@
 from collections import Counter
 
 def aggregate_and_filter(identifiers, threshold, top_n):
-    """Count appearances and filter by threshold."""
+    """Count appearances and filter by threshold.
+    
+    Args:
+        identifiers: List of account identifiers (with duplicates)
+        threshold: Minimum appearances required
+        top_n: Maximum results to return (None = no limit)
+    """
     counter = Counter(identifiers)
     filtered = {id: count for id, count in counter.items() if count >= threshold}
-    sorted_results = sorted(filtered.items(), key=lambda x: x[1], reverse=True)[:top_n]
-    return sorted_results
+    sorted_results = sorted(filtered.items(), key=lambda x: x[1], reverse=True)
+    
+    # If top_n is None, return all results
+    if top_n is None:
+        return sorted_results
+    else:
+        return sorted_results[:top_n]
 
 def display_results(platform_name, results):
     """Pretty print results for a platform."""

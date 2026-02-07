@@ -32,7 +32,7 @@ ACCOUNT_THRESHOLD = 2  # Twitter, Facebook, Instagram, TikTok, YouTube
 COMMUNITY_THRESHOLD = 2  # Reddit, Telegram
 
 # Results
-TOP_N_RESULTS = 30
+TOP_N_RESULTS = None  # No limit - return all accounts above threshold
 
 # Rate limiting
 SEARCH_DELAY = 0.5  # seconds between searches
