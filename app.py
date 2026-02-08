@@ -306,9 +306,9 @@ if user_input:
         st.session_state.awaiting_scope = True
         
         # Ask scope question with EXACT wording from terminal
-        scope_question = """How should we search for this community?
-  A) Deep - specific term for a niche issue, brand, product, or clear subject
-  B) Wide - cast a net across multiple angles, perspectives, or dimensions
+        scope_question = """How should we search for this community? \n
+  A) Narrow - a single issue, brand, product, or clear subject that can will search deeply \n
+  B) Wide - a topic with mutliple dimensions to it that each need to be searched \n
   [leave blank to auto-detect]"""
         
         st.session_state.messages.append({"role": "assistant", "content": scope_question})
